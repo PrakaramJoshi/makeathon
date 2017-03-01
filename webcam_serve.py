@@ -1,3 +1,10 @@
+cd ..
+cd webcam
+cd images
+python -m SimpleHTTPServer 9999 &
+cd ..
+/home/root/bin/ffmpeg/ffmpeg -t 5 -i /dev/video0 -r 2 images/a\%d.png
+
 import os
 import os.path
 import subprocess
